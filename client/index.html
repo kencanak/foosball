@@ -14,6 +14,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/angular-notify/dist/angular-notify.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -55,6 +56,9 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+      <script src="bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+      <script src="bower_components/angular-notify/dist/angular-notify.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -73,8 +77,10 @@
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
           <script src="components/auth/auth.service.js"></script>
+          <script src="components/auth/game.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/footer/footer.controller.js"></script>
+          <script src="components/game/game.controller.js"></script>
           <script src="components/modal/modal.service.js"></script>
           <script src="components/mongoose-error/mongoose-error.directive.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>

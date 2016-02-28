@@ -1,5 +1,8 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+<div class="navbar navbar-default navbar-static-top" ng-class="{true: 'showGameForm'}[showGameForm.showGameForm]" ng-controller="NavbarCtrl">
   <div class="container">
+    <div class="game-form-menu">
+      <div ng-include="'components/game/game.html'"></div>
+    </div>
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -7,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand header-logo"></a>
+      <a href="/" class="navbar-brand header-logo" ng-class="{true: 'showGameForm'}[showGameForm.showGameForm]"></a>
     </div>
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 

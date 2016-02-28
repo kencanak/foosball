@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+  .controller('NavbarCtrl', function ($scope, $location, Auth, showGameForm) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
     }];
+
+    $scope.showGameForm = showGameForm;
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
@@ -14,7 +16,7 @@ angular.module('foosballApp')
 
     $scope.logout = function() {
       Auth.logout();
-      $location.path('/login');
+      $location.path('/account');
     };
 
     $scope.isActive = function(route) {

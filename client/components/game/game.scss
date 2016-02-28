@@ -1,0 +1,97 @@
+.game-outer-wrapper {
+  background: $themebg;
+  color: #fff;
+  padding-bottom: 40px;
+
+  h3
+  {
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f4f4f2;
+  }
+
+  .btn-create-game
+  {
+    color: #fff;
+    text-transform: uppercase;
+    background: #7a7c79;
+  }
+  .error
+  {
+    line-height: 45px;
+    font-size: 16px;
+  }
+  .team-wrapper
+  {
+    margin-top: 30px;
+    border-top: 2px solid #373735;
+    padding: 15px;
+    margin-bottom: 30px;
+
+
+    .score
+    {
+      width: 40%;
+      float: left;
+
+      &:nth-child(2)
+      {
+        width: 20%;
+        line-height: 34px;
+      }
+    }
+
+    .team-group
+    {
+
+
+      .team-header
+      {
+        @include border-radius-top(12px);
+        background: #393a37;
+        color: #fff;
+      }
+
+      .team-players
+      {
+        background: #000;
+        padding: 15px;
+
+        .no-player
+        {
+          background: none;
+          color: #2e2e2c;
+        }
+
+        &:last-child
+        {
+          @include border-radius-bottom(12px);
+        }
+
+        .team-thumbnail
+        {
+          border: 1px dashed #2e2e2c;
+          @include border-radius(12px);
+          background: none;
+          padding: 5px;
+        }
+
+
+      }
+    }
+  }
+
+  .players-list-wrapper
+  {
+    @include border-radius(12px);
+    background: #393a37;
+    padding: 15px;
+  }
+
+  .btn-draggable
+  {
+    color: #000;
+    background: #666663;
+    @include border-radius(18px);
+  }
+}
