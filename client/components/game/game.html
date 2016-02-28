@@ -28,7 +28,7 @@
         <div class="row team-players">
           <div class="team-thumbnail" data-drop="true" ng-model='team1'  data-jqyoui-options="optionsTeam1" jqyoui-droppable="{multiple:true}">
             <div class="caption text-center">
-              <div class="btn btn-draggable" ng-repeat="item in team1" ng-if="$index == 0" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team1" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.name}}</div>
+              <div class="btn btn-draggable" ng-repeat="item in team1" ng-if="$index == 0" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team1" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="deletePlayer(item, 'team1')">{{item.name}} X</div>
               <div class="btn btn-draggable no-player" ng-if="team1.length == 0">
                 Player 1
               </div>
@@ -38,7 +38,7 @@
         <div class="row team-players">
           <div class="team-thumbnail" data-drop="true" ng-model='team1' data-jqyoui-options="optionsTeam1" jqyoui-droppable="{multiple:true}">
             <div class="caption text-center">
-              <div class="btn btn-draggable" ng-repeat="item in team1" ng-if="$index == 1" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team1" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.name}}</div>
+              <div class="btn btn-draggable" ng-repeat="item in team1" ng-if="$index == 1" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team1" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="deletePlayer(item, 'team1')">{{item.name}} X</div>
               <div class="btn btn-draggable no-player" ng-if="team1.length < 2">
                 Player 2
               </div>
@@ -69,7 +69,7 @@
         <div class="row team-players">
           <div class="team-thumbnail" data-drop="true" ng-model='team2'  data-jqyoui-options="optionsTeam2" jqyoui-droppable="{multiple:true}">
             <div class="caption text-center">
-              <div class="btn btn-draggable" ng-repeat="item in team2" ng-if="$index == 0" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team2" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.name}}</div>
+              <div class="btn btn-draggable" ng-repeat="item in team2" ng-if="$index == 0" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team2" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="deletePlayer(item, 'team2')">{{item.name}} X</div>
               <div class="btn btn-draggable no-player" ng-if="team2.length == 0">
                 Player 1
               </div>
@@ -79,7 +79,7 @@
         <div class="row team-players">
           <div class="team-thumbnail" data-drop="true" ng-model='team2' data-jqyoui-options="optionsTeam2" jqyoui-droppable="{multiple:true}">
             <div class="caption text-center">
-              <div class="btn btn-draggable" ng-repeat="item in team2" ng-if="$index == 1" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team2" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.name}}</div>
+              <div class="btn btn-draggable" ng-repeat="item in team2" ng-if="$index == 1" ng-show="item.name" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="team2" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="deletePlayer(item, 'team2')">{{item.name}} X</div>
               <div class="btn btn-draggable no-player" ng-if="team2.length < 2">
                 Player 2
               </div>
