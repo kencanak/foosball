@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 var crypto = require('crypto');
 
 var UserSchema = new Schema({
-  name: String,
+  fname: String,
+  lname: String,
   email: { type: String, lowercase: true },
   role: {
     type: String,
@@ -35,7 +36,8 @@ UserSchema
   .virtual('profile')
   .get(function() {
     return {
-      'name': this.name,
+      'fname': this.fname,
+      'lname': this.lname,
       'role': this.role
     };
   });
@@ -53,6 +55,17 @@ UserSchema
 /**
  * Validations
  */
+UserSchema
+  .path('fname')
+  .validate(function(fname) {
+    return fname.length;
+  }, 'First name cannot be blank');
+
+UserSchema
+  .path('lname')
+  .validate(function(lname) {
+    return lname.length;
+  }, 'Last name cannot be blank');
 
 // Validate empty email
 UserSchema
@@ -81,7 +94,7 @@ UserSchema
       }
       respond(true);
     });
-}, 'The specified email address is already in use.');
+  }, 'The specified email address is already in use.');
 
 var validatePresenceOf = function(value) {
   return value && value.length;
