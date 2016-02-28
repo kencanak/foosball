@@ -12,6 +12,11 @@ angular.module('foosballApp')
         params: {
           id:'me'
         }
+      },
+      history: {
+        method: 'GET',
+          url: '/api/games/history',
+          isArray: true
       }
-	  });
+  });
   });
