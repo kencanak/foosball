@@ -49,6 +49,16 @@ angular.module('foosballApp')
 
     $scope.showGameForm = showGameForm;
 
+    $scope.$watch('showGameForm.showGameForm', function(newValue, oldValue){
+      if (newValue !== oldValue)
+      {
+        $scope.team1 = [];
+        $scope.team2 = [];
+        $scope.team1Score = 0;
+        $scope.team2Score = 0;
+      }
+    });
+
     $scope.optionsTeam1 = {
       accept: function(dragEl) {
         if ($scope.team1.length >= 2) {
@@ -56,6 +66,24 @@ angular.module('foosballApp')
         } else {
           return true;
         }
+      }
+    };
+
+    $scope.deletePlayer = function(player, team){
+      $scope.players.push(player);
+
+      switch(team)
+      {
+        case "team1":
+          $scope.team1 = $scope.team1.filter(function(item){
+            return item.name !== player.name;
+          });
+          break;
+        case "team2":
+          $scope.team2 = $scope.team2.filter(function(item){
+            return item.name !== player.name;
+          });
+          break;
       }
     };
 
