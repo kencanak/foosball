@@ -1,0 +1,42 @@
+<div class="game-history-wrapper" ng-controller="gameHistoryCtrl">
+
+  <div ng-repeat="(key, value) in gameHistory" ng-show="getLength(gameHistory) > 0">
+    <div class="row header">
+      <h3>{{key}}</h3>
+    </div>
+    <div class="row game-for-the-day">
+      <div class="row games" ng-repeat="(k, games) in value">
+        <h4>{{k}}</h4>
+
+        <div class="row" ng-repeat="game in games">
+          <div class="col-xs-6 team1" ng-class-odd="'odd'" ng-class-even="'even'">
+            <div class="col-xs-9 text-right">
+              <p class="team-name" ng-class="{true: 'solo'}[game.team1.length == 1]" ng-repeat="p in game.team1">{{p}}</p>
+            </div>
+            <div class="col-xs-3 text-center">
+              <p class="team-scores text-center">{{game.team1_score}}</p>
+            </div>
+          </div>
+          <div class="col-xs-6 team2" ng-class-odd="'odd'" ng-class-even="'even'">
+            <div class="col-xs-3 text-center">
+              <p class="team-scores text-center">{{game.team2_score}}</p>
+            </div>
+            <div class="col-xs-9 text-left">
+              <p class="team-name" ng-class="{true: 'solo'}[game.team2.length == 1]" ng-repeat="p2 in game.team2">{{p2}}</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <div ng-show="getLength(gameHistory) === 0 && doneCalc">
+    <h1 class="text-danger">Gasp! Nobody played?</h1>
+  </div>
+  <div class="loader-wrapper" ng-class="{true: 'hide'}[getLength(gameHistory) > 0]">
+    <img src="assets/images/ripple.svg"/>
+  </div>
+</div>
