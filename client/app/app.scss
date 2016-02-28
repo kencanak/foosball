@@ -20,6 +20,9 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 }
 
 $themebg: #2e2e2c;
+$roomoramatheme: #e14536;
+$roomoramathemehover: #f6786c;
+
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -72,4 +75,5 @@ $themebg: #2e2e2c;
 @import 'game/game.scss';
 @import 'modal/modal.scss';
 @import 'navbar/navbar.scss';
+@import 'ranking/ranking.scss';
 // endinjector

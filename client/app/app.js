@@ -7,7 +7,8 @@ angular.module('foosballApp', [
   'ui.router',
   'ui.bootstrap',
   'ngDragDrop',
-  'cgNotify'
+  'cgNotify',
+  "ngAnimate"
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -15,6 +16,50 @@ angular.module('foosballApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
+  })
+  .factory('gamePlayers', function(){
+    return [
+      {
+        'name': 'James B.',
+        'drag': true
+      },
+      {
+        'name': 'Frank S.',
+        'drag': true
+      },
+      {
+        'name': 'Eric B.',
+        'drag': true
+      },
+      {
+        'name': 'Peter D.',
+        'drag': true
+      },
+      {
+        'name': 'Hannah J.',
+        'drag': true
+      },
+      {
+        'name': 'John D.',
+        'drag': true
+      },
+      {
+        'name': 'Renato C.',
+        'drag': true
+      },
+      {
+        'name': 'Sophie S.',
+        'drag': true
+      },
+      {
+        'name': 'Sarah A.',
+        'drag': true
+      },
+      {
+        'name': 'Apes',
+        'drag': true
+      }
+    ];
   })
   .factory('showGameForm', function () {
     return { showGameForm: false };

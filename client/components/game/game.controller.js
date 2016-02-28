@@ -1,41 +1,8 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('GameCtrl', function ($scope, $location, Auth, Game, showGameForm, notify) {
-    $scope.players = [
-      {
-        'name': 'James B.',
-        'drag': true
-      },
-      {
-        'name': 'Frank S.',
-        'drag': true
-      },
-      {
-        'name': 'Eric B.',
-        'drag': true
-      },
-      {
-        'name': 'Peter D.',
-        'drag': true
-      },
-      {
-        'name': 'Hannah J.',
-        'drag': true
-      },
-      {
-        'name': 'John D.',
-        'drag': true
-      },
-      {
-        'name': 'Renato C.',
-        'drag': true
-      },
-      {
-        'name': 'Sophie S.',
-        'drag': true
-      }
-    ];
+  .controller('GameCtrl', function ($scope, $location, Auth, Game, showGameForm, notify, gamePlayers) {
+    $scope.players = angular.copy(gamePlayers);
     $scope.team1 = [];
     $scope.team2 = [];
     $scope.team1Score = 0;

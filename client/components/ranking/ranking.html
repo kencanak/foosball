@@ -1,0 +1,60 @@
+<div ng-controller="RankingCtrl">
+  <tabset class="tab-animation">
+    <tab heading="Best players">
+      <div class="ranking-tab-content-wrapper">
+        <div class="row header">
+          <div class="col-xs-3 text-center">
+            Rank
+          </div>
+          <div class="col-xs-6">
+            Name
+          </div>
+          <div class="col-xs-3 text-center">
+            Points
+          </div>
+        </div>
+        <div class="row content">
+          <div class="row" ng-repeat="item in players">
+            <div class="col-xs-3 text-center">
+              {{$index + 1}}
+            </div>
+            <div class="col-xs-6">
+              {{item.name}}
+            </div>
+            <div class="col-xs-3 text-center">
+              50
+            </div>
+          </div>
+        </div>
+      </div>
+    </tab>
+    <tab heading="Best teams">
+      <div class="ranking-tab-content-wrapper">
+        <div class="row header">
+          <div class="col-xs-3 text-center">
+            Rank
+          </div>
+          <div class="col-xs-6">
+            Team
+          </div>
+          <div class="col-xs-3 text-center">
+            Points
+          </div>
+        </div>
+        <div class="row content">
+          <div class="row" ng-repeat="item in players">
+            <div class="col-xs-3 text-center">
+              {{$index + 1}}
+            </div>
+            <div class="col-xs-6">
+              {{item.name}}
+            </div>
+            <div class="col-xs-3 text-center">
+              50
+            </div>
+          </div>
+        </div>
+      </div>
+    </tab>
+  </tabset>
+</div>
