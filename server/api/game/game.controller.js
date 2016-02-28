@@ -17,6 +17,16 @@ exports.index = function(req, res) {
   });
 };
 
+exports.gameHistory = function(req, res, next){
+  Game.find().sort('-created').exec(function(err, Games) {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).json(Games);
+    }
+  });
+}
+
 /**
  * Creates a new Game
  */

@@ -1,0 +1,68 @@
+
+.game-history-wrapper
+{
+  .header
+  {
+    border-bottom: 2px solid #ebebe9;
+    color: #000;
+
+    margin-bottom: 15px;
+  }
+
+  .sub-header
+  {
+    color: #5f605d;
+    border-bottom: 1px solid #ebebe9;
+    margin-bottom: 10px;
+  }
+
+  .game-for-the-day
+  {
+
+
+    .row
+    {
+      margin: 0;
+      margin-bottom: 5px;
+
+    }
+
+    .team-name
+    {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    .team-scores
+    {
+      margin-top: 3px;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 40px;
+    }
+    .team1
+    {
+      padding: 10px 0 0 0;
+      &.odd {
+        background: #f5f4f3;
+      }
+      &.even {
+        background: #fff;
+        color: #5f605d;
+      }
+    }
+
+    .team2
+    {
+      padding: 10px 0 0 0;
+      &.odd {
+        background: #fff;
+        color: #5f605d;
+      }
+      &.even {
+        background: #f5f4f3;
+
+      }
+    }
+  }
+}
