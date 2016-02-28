@@ -50,13 +50,15 @@
 
       <!-- game score -->
       <div class="col-xs-2">
-        <span class="score">
-          <input type="number" ng-model="team1Score" name="team1Score" integer class="form-control"/>
-        </span>
-        <span class="score text-center"> - </span>
-        <span class="score">
-          <input type="number" ng-model="team2Score" name="team2Score" integer  class="form-control"/>
-        </span>
+        <div class="score-wrapper">
+          <span class="score">
+            <input type="number" ng-model="team1Score" name="team1Score" integer class="form-control"/>
+          </span>
+          <span class="score text-center"> - </span>
+          <span class="score">
+            <input type="number" ng-model="team2Score" name="team2Score" integer  class="form-control"/>
+          </span>
+        </div>
       </div>
       <!-- end of game score -->
 

@@ -3,20 +3,34 @@
 {
   .header
   {
+<<<<<<< HEAD
+=======
     &:not(:first-child)
     {
       margin-top: 20px;
     }
+>>>>>>> features/game-history
     border-bottom: 2px solid #ebebe9;
     color: #000;
 
     margin-bottom: 15px;
   }
 
+<<<<<<< HEAD
+  .sub-header
+  {
+    color: #5f605d;
+    border-bottom: 1px solid #ebebe9;
+    margin-bottom: 10px;
+  }
+=======
+>>>>>>> features/game-history
 
   .game-for-the-day
   {
 
+<<<<<<< HEAD
+=======
     h4
     {
       color: #5f605d;
@@ -25,6 +39,7 @@
       margin-bottom: 10px;
 
     }
+>>>>>>> features/game-history
 
     .row
     {
@@ -32,21 +47,27 @@
       margin-bottom: 5px;
 
     }
+<<<<<<< HEAD
+=======
     .games
     {
       margin-bottom: 20px;
     }
+>>>>>>> features/game-history
 
     .team-name
     {
       font-size: 16px;
       font-weight: 600;
       line-height: 18px;
+<<<<<<< HEAD
+=======
 
       &.solo
       {
         line-height: 45px;
       }
+>>>>>>> features/game-history
     }
     .team-scores
     {

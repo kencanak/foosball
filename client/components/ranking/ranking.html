@@ -1,4 +1,4 @@
-<div ng-controller="RankingCtrl">
+<div ng-controller="RankingCtrl" class="ranking-wrapper">
   <tabset class="tab-animation">
     <tab heading="Best players">
       <div class="ranking-tab-content-wrapper">
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="row content" ng-show="getLength(rankings) == 0">
+        <div class="row content" ng-show="getLength(rankings) == 0 && doneCalc">
           <p class="text-warning">Whoops, no game yet. Let's play?</p>
         </div>
       </div>
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="row content" ng-show="getLength(teamRankings) == 0">
+        <div class="row content" ng-show="getLength(teamRankings) == 0 && doneCalc">
           <p class="text-warning">Probably all rone rangers out there, or no game yet :(</p>
         </div>
       </div>

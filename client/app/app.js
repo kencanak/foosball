@@ -8,7 +8,8 @@ angular.module('foosballApp', [
   'ui.bootstrap',
   'ngDragDrop',
   'cgNotify',
-  "ngAnimate"
+  "ngAnimate",
+  "angular-momentjs"
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

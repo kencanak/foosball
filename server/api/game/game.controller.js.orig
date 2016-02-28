@@ -27,7 +27,10 @@ exports.gameHistory = function(req, res, next){
   });
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> features/game-history
 /**
  * Creates a new Game
  */

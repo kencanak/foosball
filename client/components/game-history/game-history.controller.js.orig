@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('foosballApp')
+<<<<<<< HEAD
+  .controller('gameHistoryCtrl', function ($scope, $location, Auth, Game, showGameForm, notify, gamePlayers) {
+=======
   .controller('gameHistoryCtrl', function ($scope, $location, Auth, Game, showGameForm, notify, gamePlayers, $moment) {
+>>>>>>> features/game-history
     $scope.players = angular.copy(gamePlayers);
 
     $scope.showGameForm = showGameForm;
@@ -11,7 +15,10 @@ angular.module('foosballApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
     $scope.doneCalc = false;
+<<<<<<< HEAD
+=======
     $scope.gameHistory = {}
+>>>>>>> features/game-history
 
 
     sortGames();
@@ -26,6 +33,13 @@ angular.module('foosballApp')
       return Object.keys(obj).length;
     }
 
+<<<<<<< HEAD
+    function sortGames(){
+      Game.history().$promise.then(function(data) {
+        angular.each(data, function(value, key){
+
+        });
+=======
 
 
     function sortGames(){
@@ -46,6 +60,7 @@ angular.module('foosballApp')
         });
         $scope.doneCalc = true;
         console.log($scope.gameHistory);
+>>>>>>> features/game-history
       });
 
     }
