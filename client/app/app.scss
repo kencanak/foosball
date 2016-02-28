@@ -8,11 +8,60 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
+/**
+ * App-wide Styles
+ */
+
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+$themebg: #2e2e2c;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+
+@mixin border-radius-bottom($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+
+@mixin border-radius-right($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-topright: $radius;
 }
 
 // Component styles are injected through grunt
@@ -20,4 +69,5 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'modal/modal.scss';
 // endinjector

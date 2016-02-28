@@ -3,3 +3,85 @@
 
 $btnText:                           #fff;
 $btnTextAlt:                        #000;
+$loginBg:                           #c7c6c2;
+
+.login-outer-wrapper
+{
+  background: $themebg;
+  color: #fff;
+
+  .login-content-wrapper
+  {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    color: #2e2e2c;
+
+    .login-section-common-style
+    {
+      padding: 0 25px 25px 25px;
+      height: 450px !important;
+      box-sizing: border-box;
+      h3
+      {
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+      }
+
+      .btn
+      {
+        margin-top: 20px;
+        color: #fff;
+      }
+      input
+      {
+        border: none;
+      }
+    }
+
+    .sign-up-wrapper
+    {
+      @include border-radius-left(12px);
+
+      background: #fffffe;
+      h3
+      {
+        border-bottom: 2px solid #f4f4f2;
+      }
+      .btn-login
+      {
+        background: #5f605d;
+      }
+
+      input
+      {
+        background-color: #f5f4f3;
+      }
+    }
+
+    .login-wrapper
+    {
+      @include border-radius-right(12px);
+
+      height: 100%;
+
+      background: $loginBg;
+      h3
+      {
+        border-bottom: 2px solid #b7b7b3;
+      }
+
+      .btn-login
+      {
+        background: #3e3e3c;
+      }
+
+      input
+      {
+        background-color: #989895;
+      }
+    }
+  }
+}

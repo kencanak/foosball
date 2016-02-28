@@ -13,13 +13,13 @@ angular.module('foosballApp')
           email: $scope.user.email,
           password: $scope.user.password
         })
-        .then( function() {
-          // Logged in, redirect to home
-          $location.path('/');
-        })
-        .catch( function(err) {
-          $scope.errors.other = err.message;
-        });
+          .then( function() {
+            // Logged in, redirect to home
+            $location.path('/');
+          })
+          .catch( function(err) {
+            $scope.errors.other = err.message;
+          });
       }
     };
 

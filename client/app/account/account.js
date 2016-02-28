@@ -8,6 +8,11 @@ angular.module('foosballApp')
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })
+      .state('account', {
+        url: '/account',
+        templateUrl: 'app/account/account.html',
+        controller: 'AccountCtrl'
+      })
       .state('signup', {
         url: '/signup',
         templateUrl: 'app/account/signup/signup.html',
