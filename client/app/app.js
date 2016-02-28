@@ -62,7 +62,7 @@ angular.module('foosballApp', [
     ];
   })
   .factory('showGameForm', function () {
-    return { showGameForm: false };
+    return { showGameForm: false, added: false };
   })
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
@@ -86,6 +86,16 @@ angular.module('foosballApp', [
         else {
           return $q.reject(response);
         }
+      }
+    };
+  })
+  .filter('minLength', function(){
+    return function(input, len, pad){
+      input = input.toString();
+      if(input.length >= len) return input;
+      else{
+        pad = (pad || 0).toString();
+        return new Array(1 + len - input.length).join(pad) + input;
       }
     };
   })

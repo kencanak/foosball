@@ -1,0 +1,19 @@
+.sign-up-wrapper
+{
+  @include border-radius-left(12px);
+
+  background: #fffffe;
+  h3
+  {
+    border-bottom: 2px solid #f4f4f2;
+  }
+  .btn-login
+  {
+    background: #5f605d;
+  }
+
+  input
+  {
+    background-color: #f5f4f3;
+  }
+}

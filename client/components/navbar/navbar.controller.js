@@ -8,6 +8,7 @@ angular.module('foosballApp')
     }];
 
     $scope.showGameForm = showGameForm;
+    $scope.showGameForm.added = false;
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

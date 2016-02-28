@@ -19,6 +19,7 @@ angular.module('foosballApp')
     $scope.$watch('showGameForm.showGameForm', function(newValue, oldValue){
       if (newValue !== oldValue)
       {
+        $scope.players = angular.copy(gamePlayers);
         $scope.team1 = [];
         $scope.team2 = [];
         $scope.team1Score = 0;
@@ -98,9 +99,12 @@ angular.module('foosballApp')
         $scope.errors = null;
         notify({ message:'Game added successfully', position:'center', duration: 3000} );
         $scope.showGameForm.showGameForm = false;
+        $scope.showGameForm.added = true;
       }, function(errorResponse) {
         $scope.errors = errorResponse.data.message;
       });
     };
+
+
 
   });

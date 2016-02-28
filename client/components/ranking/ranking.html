@@ -13,20 +13,24 @@
             Points
           </div>
         </div>
-        <div class="row content">
-          <div class="row" ng-repeat="item in players">
+        <div class="row content" ng-show="getLength(rankings) > 0">
+          <div class="row" ng-repeat="item in rankings">
             <div class="col-xs-3 text-center">
-              {{$index + 1}}
+              {{$index + 1  | minLength: 2}}
             </div>
             <div class="col-xs-6">
-              {{item.name}}
+              {{item.player}}
             </div>
             <div class="col-xs-3 text-center">
-              50
+              {{item.scores | minLength: 2}}
             </div>
           </div>
         </div>
+        <div class="row content" ng-show="getLength(rankings) == 0">
+          <p class="text-warning">Whoops, no game yet. Let's play?</p>
+        </div>
       </div>
+
     </tab>
     <tab heading="Best teams">
       <div class="ranking-tab-content-wrapper">
@@ -41,20 +45,27 @@
             Points
           </div>
         </div>
-        <div class="row content">
-          <div class="row" ng-repeat="item in players">
+        <div class="row content" ng-show="getLength(teamRankings) > 0">
+          <div class="row" ng-repeat="item in teamRankings">
             <div class="col-xs-3 text-center">
-              {{$index + 1}}
+              {{$index + 1  | minLength: 2}}
             </div>
             <div class="col-xs-6">
-              {{item.name}}
+              {{item.players[0]}}<br/>{{item.players[1]}}
             </div>
             <div class="col-xs-3 text-center">
-              50
+              {{item.scores  | minLength: 2}}
             </div>
           </div>
         </div>
+        <div class="row content" ng-show="getLength(teamRankings) == 0">
+          <p class="text-warning">Probably all rone rangers out there, or no game yet :(</p>
+        </div>
       </div>
+
     </tab>
   </tabset>
+  <div class="loader-wrapper" ng-class="{true: 'hide'}[doneCalc]">
+    <img src="assets/images/ripple.svg"/>
+  </div>
 </div>

@@ -27,7 +27,7 @@
   border: 1px solid #ddd;
   border-top: none;
   height: 380px;
-  @include border-radius-bottom(12px);
+  @include border-radius-bottom(6px);
   padding: 15px;
   box-sizing: border-box;
   overflow: hidden;

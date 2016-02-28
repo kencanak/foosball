@@ -1,0 +1,39 @@
+$loginBg:                           #c7c6c2;
+
+.login-outer-wrapper
+{
+  background: $themebg;
+  color: #fff;
+
+  .login-content-wrapper
+  {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    color: #2e2e2c;
+
+    .login-section-common-style
+    {
+      padding: 0 25px 25px 25px;
+      height: 450px !important;
+      box-sizing: border-box;
+      h3
+      {
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+      }
+
+      .btn
+      {
+        margin-top: 20px;
+        color: #fff;
+      }
+      input
+      {
+        border: none;
+      }
+    }
+  }
+}
