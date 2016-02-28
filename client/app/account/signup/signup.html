@@ -38,11 +38,11 @@
           <span class="text-danger" ng-show="formRegister.email.$error.required && submitted">
             - Enter a valid email (e.g. xxx@roomorama.com)
           </span>
-          <span class="text-danger" ng-show="formRegister.email.$error.mongoose">
+          <span class="text-danger" ng-show="regerrors.email">
             - {{ regerrors.email }}
           </span>
 
-      <input type="email" name="email" class="form-control" ng-model="reguser.email"
+      <input type="email" name="email" ng-change="regerrors.email = null" class="form-control" ng-model="reguser.email"
              required
              mongoose-error/>
 

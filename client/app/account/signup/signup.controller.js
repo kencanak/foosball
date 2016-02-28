@@ -7,7 +7,12 @@ angular.module('foosballApp')
 
     $scope.register = function(form) {
       $scope.submitted = true;
-
+      var reg = /^[_a-z0-9]+(\.[_a-z0-9]+)*@roomorama.com$/;
+      if (!reg.test($scope.reguser.email))
+      {
+        $scope.regerrors['email'] = "Enter a valid email (e.g. xxx@roomorama.com)";
+        return false;
+      }
       if(form.$valid) {
         Auth.createUser({
           fname: $scope.reguser.fname,
