@@ -2,7 +2,12 @@
 
 angular.module('foosballApp')
   .controller('SignupCtrl', function ($scope, Auth, $location) {
-    $scope.reguser = {};
+    $scope.reguser = {
+      fname: '',
+      lname: '',
+      email: '',
+      password: ''
+    };
     $scope.regerrors = {};
 
     $scope.register = function(form) {

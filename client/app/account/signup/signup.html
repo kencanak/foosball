@@ -2,36 +2,38 @@
   <h3>New Member?</h3>
   <form class="form" name="formRegister" ng-controller="SignupCtrl" ng-submit="register(formRegister)" novalidate>
 
-    <div class="form-group" ng-class="{ 'has-success': formRegister.fname.$valid && submitted,
-                                            'has-error': formRegister.fname.$invalid && submitted }">
-      <label>
-        First Name
-      </label>
+    <div class="form-group">
+      <span class="input input--kaede" ng-class="{true: 'input--filled'}[reguser.fname !== '']">
+        <input class="input__field input__field--kaede" placeholder="John" id="signup-fname" type="text" name="fname" class="form-control" ng-model="reguser.fname" required />
+        <label class="input__label input__label--kaede" for="signup-fname">
+          <span class="input__label-content input__label-content--kaede">First Name</span>
+        </label>
+      </span>
+
           <span class="text-danger" ng-show="formRegister.fname.$error.required && submitted">
             - First name is required
           </span>
-
-
-      <input type="text" name="fname" class="form-control" ng-model="reguser.fname"
-             required/>
-
     </div>
 
-    <div class="form-group" ng-class="{ 'has-success': formRegister.lname.$valid && submitted,
-                                            'has-error': formRegister.lname.$invalid && submitted }">
-      <label>Last Name</label>
+    <div class="form-group">
+      <span class="input input--kaede" ng-class="{true: 'input--filled'}[reguser.lname !== '']">
+        <input class="input__field input__field--kaede" placeholder="Doe" id="signup-lname" type="text" name="lname" class="form-control" ng-model="reguser.lname" required />
+        <label class="input__label input__label--kaede" for="signup-lname">
+          <span class="input__label-content input__label-content--kaede">Last Name</span>
+        </label>
+      </span>
           <span class="text-danger" ng-show="formRegister.lname.$error.required && submitted">
             - Last name is required
           </span>
-
-      <input type="text" name="lname" class="form-control" ng-model="reguser.lname"
-             required/>
-
     </div>
 
-    <div class="form-group" ng-class="{ 'has-success': formRegister.email.$valid && submitted,
-                                            'has-error': formRegister.email.$invalid && submitted }">
-      <label>Email</label>
+    <div class="form-group">
+      <span class="input input--kaede" ng-class="{true: 'input--filled'}[reguser.email !== '']">
+        <input class="input__field input__field--kaede" placeholder="xxx@roomorama.com" id="signup-email" type="email" name="email" ng-change="regerrors.email = null" class="form-control" ng-model="reguser.email" required mongoose-error/>
+        <label class="input__label input__label--kaede" for="signup-email">
+          <span class="input__label-content input__label-content--kaede">Email</span>
+        </label>
+      </span>
           <span class="text-danger" ng-show="formRegister.email.$error.email && submitted">
             - Enter a valid email (e.g. xxx@roomorama.com)
           </span>
@@ -41,28 +43,24 @@
           <span class="text-danger" ng-show="regerrors.email">
             - {{ regerrors.email }}
           </span>
-
-      <input type="email" name="email" ng-change="regerrors.email = null" class="form-control" ng-model="reguser.email"
-             required
-             mongoose-error/>
-
     </div>
 
-    <div class="form-group" ng-class="{ 'has-success': formRegister.password.$valid && submitted,
-                                            'has-error': formRegister.password.$invalid && submitted }">
-      <label>Password</label>
+    <div class="form-group">
+       <span class="input input--kaede" ng-class="{true: 'input--filled'}[reguser.password !== '']">
+        <input class="input__field input__field--kaede" placeholder="***" id="signup-password" type="password" name="password" class="form-control" ng-model="reguser.password"
+               ng-minlength="3"
+               required
+               mongoose-error/>
+        <label class="input__label input__label--kaede" for="signup-password">
+          <span class="input__label-content input__label-content--kaede">Password</span>
+        </label>
+      </span>
           <span class="text-danger" ng-show="(formRegister.password.$error.minlength || formRegister.password.$error.required) && submitted">
             - Password must be at least 3 characters.
           </span>
           <span class="text-danger" ng-show="formRegister.password.$error.mongoose">
             - {{ regerrors.password }}
           </span>
-
-      <input type="password" name="password" class="form-control" ng-model="reguser.password"
-             ng-minlength="3"
-             required
-             mongoose-error/>
-
     </div>
 
     <div>

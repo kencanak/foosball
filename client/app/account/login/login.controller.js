@@ -2,8 +2,15 @@
 
 angular.module('foosballApp')
   .controller('LoginCtrl', function ($scope, Auth, $location) {
-    $scope.user = {};
+    $scope.user = {
+      email: '',
+      password:''
+    };
     $scope.errors = {};
+
+    $scope.$watch('user', function(){
+      console.log($scope.user)
+    })
 
     $scope.login = function(form) {
       $scope.submitted = true;

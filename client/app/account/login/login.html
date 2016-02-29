@@ -2,30 +2,33 @@
   <h3>Already registered?</h3>
   <form class="form" name="formLogin" ng-submit="login(formLogin)" ng-controller="LoginCtrl" novalidate>
 
-    <div class="form-group">
-      <label>Email</label>
-          <span class="text-danger" ng-show="formLogin.email.$error.required && submitted">
-            - Enter a valid email (e.g. xxx@roomorama.com)
-          </span>
-          <span class="text-danger" ng-show="formLogin.email.$error.email && submitted">
-            - Enter a valid email (e.g. xxx@roomorama.com)
-          </span>
 
-      <input type="email" name="email" class="form-control" ng-model="user.email" required>
+    <div class="form-group">
+      <span class="input input--kaede" ng-class="{true: 'input--filled'}[user.email !== '']">
+        <input class="input__field input__field--kaede" placeholder="xxx@roomorama.com" type="email" id="login-email" name="email" class="form-control" ng-model="user.email" required />
+        <label class="input__label input__label--kaede" for="login-email">
+          <span class="input__label-content input__label-content--kaede">Email</span>
+        </label>
+      </span>
+      <span class="text-danger" ng-show="(formLogin.email.$error.required || formLogin.email.$error.email) && submitted">
+        Enter a valid email (e.g. xxx@roomorama.com)
+      </span>
+
     </div>
 
     <div class="form-group">
-      <label>Password</label>
-          <span class="text-danger" ng-show="formLogin.password.$error.required && submitted">
-            - Password is required
-          </span>
-
-      <input type="password" name="password" class="form-control" ng-model="user.password" required>
-    </div>
-
-    <div class="form-group has-error">
-
-      <p class="help-block">{{ errors.other }}</p>
+      <span class="input input--kaede"  ng-class="{true: 'input--filled'}[user.password !== '']">
+        <input class="input__field input__field--kaede" placeholder="***" type="password" name="password" class="form-control" ng-model="user.password" required id="login-password"/>
+        <label class="input__label input__label--kaede" for="login-password">
+          <span class="input__label-content input__label-content--kaede">Password</span>
+        </label>
+      </span>
+      <span class="text-danger" ng-show="(form.password.$error.required && !errors.other && submitted)">
+        Please enter your password
+      </span>
+       <span class="text-danger" ng-show="(errors.other)">
+         {{ errors.other }}
+       </span>
     </div>
 
     <div>
