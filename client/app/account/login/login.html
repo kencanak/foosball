@@ -23,7 +23,7 @@
           <span class="input__label-content input__label-content--kaede">Password</span>
         </label>
       </span>
-      <span class="text-danger" ng-show="(form.password.$error.required && !errors.other && submitted)">
+      <span class="text-danger" ng-show="(!errors.other && formLogin.password.$error.required  && submitted)">
         Please enter your password
       </span>
        <span class="text-danger" ng-show="(errors.other)">

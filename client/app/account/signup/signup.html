@@ -11,7 +11,7 @@
       </span>
 
           <span class="text-danger" ng-show="formRegister.fname.$error.required && submitted">
-            - First name is required
+            First name is required
           </span>
     </div>
 
@@ -23,7 +23,7 @@
         </label>
       </span>
           <span class="text-danger" ng-show="formRegister.lname.$error.required && submitted">
-            - Last name is required
+            Last name is required
           </span>
     </div>
 
@@ -34,14 +34,8 @@
           <span class="input__label-content input__label-content--kaede">Email</span>
         </label>
       </span>
-          <span class="text-danger" ng-show="formRegister.email.$error.email && submitted">
-            - Enter a valid email (e.g. xxx@roomorama.com)
-          </span>
-          <span class="text-danger" ng-show="formRegister.email.$error.required && submitted">
-            - Enter a valid email (e.g. xxx@roomorama.com)
-          </span>
-          <span class="text-danger" ng-show="regerrors.email">
-            - {{ regerrors.email }}
+          <span class="text-danger" ng-show="(formRegister.email.$error.email || formRegister.email.$error.required || regerrors.email) && submitted">
+            Enter a valid email (e.g. xxx@roomorama.com)
           </span>
     </div>
 
@@ -55,11 +49,11 @@
           <span class="input__label-content input__label-content--kaede">Password</span>
         </label>
       </span>
-          <span class="text-danger" ng-show="(formRegister.password.$error.minlength || formRegister.password.$error.required) && submitted">
-            - Password must be at least 3 characters.
+          <span class="text-danger" ng-show="!formRegister.password.$error.mongoose && (formRegister.password.$error.minlength || formRegister.password.$error.required) && submitted">
+            Password must be at least 3 characters.
           </span>
           <span class="text-danger" ng-show="formRegister.password.$error.mongoose">
-            - {{ regerrors.password }}
+            {{ regerrors.password }}
           </span>
     </div>
 

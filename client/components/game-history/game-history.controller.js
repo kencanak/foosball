@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('gameHistoryCtrl', function ($scope, $location, Auth, Game, showGameForm, notify, gamePlayers, $moment) {
+  .controller('gameHistoryCtrl', function ($scope, $location, Auth, Game, showGameForm, notify, gamePlayers, $moment,$animate) {
     $scope.players = angular.copy(gamePlayers);
 
     $scope.showGameForm = showGameForm;
@@ -45,7 +45,6 @@ angular.module('foosballApp')
           $scope.gameHistory[moment(value.created).format('MMMM YYYY')][moment(value.created).format('dddd DD')].push(value);
         });
         $scope.doneCalc = true;
-        console.log($scope.gameHistory);
       });
 
     }

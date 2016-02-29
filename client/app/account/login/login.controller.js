@@ -8,10 +8,6 @@ angular.module('foosballApp')
     };
     $scope.errors = {};
 
-    $scope.$watch('user', function(){
-      console.log($scope.user)
-    })
-
     $scope.login = function(form) {
       $scope.submitted = true;
 
