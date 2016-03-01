@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location) {
+  .controller('SignupCtrl', function ($scope, Auth, $location, isMobileRegistration) {
     $scope.reguser = {
       fname: '',
       lname: '',
@@ -9,6 +9,8 @@ angular.module('foosballApp')
       password: ''
     };
     $scope.regerrors = {};
+
+    $scope.isMobileRegistration = isMobileRegistration;
 
     $scope.register = function(form) {
       $scope.submitted = true;

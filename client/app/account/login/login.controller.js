@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, isMobileRegistration) {
     $scope.user = {
       email: '',
       password:''
     };
     $scope.errors = {};
+    $scope.isMobileRegistration = isMobileRegistration;
+
 
     $scope.login = function(form) {
       $scope.submitted = true;
@@ -26,7 +28,7 @@ angular.module('foosballApp')
       }
     };
 
-  }).directive('login', function(){
+  }).directive('login', function(isMobileRegistration){
       return{
         templateUrl: 'app/account/login/login.html',
         restrict: 'E',

@@ -1,4 +1,4 @@
-<div class="container-fluid login-outer-wrapper">
+<div class="container-fluid login-outer-wrapper"  ng-controller="AccountCtrl">
   <div class="row login-content-wrapper col-xs-8 visible-lg visible-md">
     <!--- registration section -->
     <div>
@@ -11,11 +11,28 @@
     </div>
     <!-- end of login section -->
   </div>
-  <div class="row mobile-login-content-wrapper col-xs-10 visible-xs visible-sm">
-    <!-- login section -->
-    <div>
-      <login formtype="mobile"></login>
+  <div class="row mobile-login-content-wrapper col-xs-12 visible-xs visible-sm">
+    <div class="col-xs-2"></div>
+
+    <div class="flip col-xs-8">
+      <div class="card" ng-class="{true:'flipped'}[isMobileRegistration.isMobileRegistration]">
+        <div class="face front">
+          <!-- login section -->
+          <div>
+            <login formtype="mobile"></login>
+          </div>
+          <!-- end of login section -->
+
+        </div>
+        <div class="face back">
+          <!--- registration section -->
+          <div>
+            <signup formtype="mobile"></signup>
+          </div>
+          <!-- end of registration section -->
+        </div>
+      </div>
     </div>
-    <!-- end of login section -->
+    <div class="col-xs-2"></div>
   </div>
 </div>

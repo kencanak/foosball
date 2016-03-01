@@ -20,3 +20,9 @@
     background: #dedede;
   }
 }
+.mobile-login-content-wrapper
+{
+  .sign-up-wrapper {
+    @include border-radius(12px);
+  }
+}

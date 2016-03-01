@@ -62,6 +62,9 @@ angular.module('foosballApp', [
       }
     ];
   })
+  .factory('isMobileRegistration', function(){
+    return {isMobileRegistration: false};
+  })
   .factory('showGameForm', function () {
     return { showGameForm: false, added: false };
   })
