@@ -20,6 +20,7 @@
   background: url(../assets/images/logo-1f253cec9f2b2f629440213db0277b5bab62b9d346982514494fa1e86fe65e70.svg) no-repeat;
 }
 
+
 .navbar-nav
 {
   li > a
@@ -42,41 +43,67 @@
   margin-top: 9px;
 }
 
-.navbar {
-  width: 100%;
-  max-height: 50px;
-  height: auto;
+.header-logo.showGameForm {
+  visibility: visible;
+  opacity: 0;
+}
 
-  overflow: hidden;
 
-  /* Set our transitions up. */
-  -webkit-transition: max-height 0.8s;
-  -moz-transition: max-height 0.8s;
-  transition: max-height 0.8s;
+@media (max-width: $screen-xs-max) and (max-width:  $screen-sm-min){
+  .header-logo
+  {
+    margin: 15px 0 0 15px;
+  }
+  .header-logo.showGameForm {
+    visibility: visible;
+    opacity: 1;
+  }
 
   .game-form-menu
   {
-    max-height: 0px;
+    display: none;
+  }
+
+  .create-game-link
+  {
+    @include border-radius(-0x);
+    border: none;
+  }
+}
+
+@media (min-width: $screen-sm-min){
+
+  .navbar {
+    width: 100%;
+    max-height: 50px;
+    height: auto;
+
+    overflow: hidden;
+
+    /* Set our transitions up. */
     -webkit-transition: max-height 0.8s;
     -moz-transition: max-height 0.8s;
     transition: max-height 0.8s;
 
-    opacity: 0;
-  }
+    .game-form-menu
+    {
+      max-height: 0px;
+      -webkit-transition: max-height 0.8s;
+      -moz-transition: max-height 0.8s;
+      transition: max-height 0.8s;
 
-}
-.navbar.showGameForm {
-  max-height: 650px;
-  height: auto;
-  .game-form-menu
-  {
+      opacity: 0;
+    }
+
+  }
+  .navbar.showGameForm {
+    max-height: 650px;
     height: auto;
-    max-height: 600px;
-    opacity: 1;
+    .game-form-menu
+    {
+      height: auto;
+      max-height: 600px;
+      opacity: 1;
+    }
   }
-}
-
-.header-logo.showGameForm {
-  visibility: visible;
-  opacity: 0;
 }
