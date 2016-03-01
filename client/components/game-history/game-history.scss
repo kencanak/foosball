@@ -1,6 +1,46 @@
 
 .game-history-wrapper
 {
+  /* Custom scrollbars for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;//#eaeaea;
+    border-left: 1px solid #cecece;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $roomoramatheme;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $roomoramathemehover;
+  }
+
+  ::-webkit-scrollbar-track {
+    @include border-radius(28px);
+    box-shadow: none;
+    border: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @include border-radius(28px);
+    box-shadow: none;
+    border: 0;
+  }
+
+  .game-history-content-wrapper
+  {
+    height: 780px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+
+  }
+
   .header
   {
     &:not(:first-child)
@@ -12,6 +52,8 @@
 
     margin-bottom: 15px;
   }
+
+
 
 
   .game-for-the-day
@@ -79,5 +121,11 @@
 
       }
     }
+  }
+}
+@media (max-width: $screen-xs-max) and (max-width:  $screen-sm-min){
+  .game-history-content-wrapper {
+    height: 500px;
+    padding-right: 10px;
   }
 }

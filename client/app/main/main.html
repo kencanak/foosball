@@ -1,18 +1,38 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-5">
+  <div class="row visible-lg visible-sm visible-md">
+    <!--<div class="col-xs-1"></div>-->
+    <div class="col-xs-6">
       <div>
         <gamehistory></gamehistory>
       </div>
     </div>
-    <!--<div class="col-xs-1"></div>-->
+    <div class="col-xs-1"></div>
     <div class="col-xs-5">
       <div>
         <ranking></ranking>
       </div>
+    </div>
+    <!--<div class="col-xs-1"></div>-->
+  </div>
+  <div class="row visible-xs">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <accordion>
+        <accordion-group is-open="mobileRankingsOpen">
+          <accordion-heading>
+            Game Rankings <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mobileRankingsOpen, 'glyphicon-chevron-right': !mobileRankingsOpen}"></i>
+          </accordion-heading>
+          <ranking></ranking>
+        </accordion-group>
+        <accordion-group is-open="mobileHistoryOpen">
+          <accordion-heading>
+            Game History <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mobileHistoryOpen, 'glyphicon-chevron-right': !mobileHistoryOpen}"></i>
+          </accordion-heading>
+          <gamehistory class="col-xs-12"></gamehistory>
+        </accordion-group>
+      </accordion>
     </div>
     <div class="col-xs-1"></div>
   </div>
