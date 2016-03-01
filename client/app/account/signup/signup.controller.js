@@ -42,4 +42,13 @@ angular.module('foosballApp')
       }
     };
 
+  }).directive('signup', function(){
+    return{
+      templateUrl: 'app/account/signup/signup.html',
+      restrict: 'E',
+      scope: {
+        'formtype': '@'
+      },
+      transclude: true
+    }
   });

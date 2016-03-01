@@ -3,6 +3,8 @@
 
 $btnText:                           #fff;
 $btnTextAlt:                        #000;
+
+
 .login-wrapper
 {
   @include border-radius-right(12px);
@@ -22,5 +24,11 @@ $btnTextAlt:                        #000;
 
   .input--kaede {
     background: #989895;
+  }
+}
+.mobile-login-content-wrapper
+{
+  .login-wrapper {
+    @include border-radius(12px);
   }
 }

@@ -107,4 +107,13 @@ angular.module('foosballApp')
 
 
 
+  }).directive('gamecreator', function(){
+    return{
+      templateUrl: 'components/game/game.html',
+      restrict: 'E',
+      scope: {
+        'formtype': '@'
+      },
+      transclude: true
+    }
   });

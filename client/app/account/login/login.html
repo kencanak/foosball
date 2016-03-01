@@ -1,12 +1,12 @@
-<div class="col-xs-6 login-wrapper login-section-common-style">
+<div class="col-xs-6 login-wrapper login-section-common-style" ng-class="{true:'col-xs-12'}[formtype=='mobile']">
   <h3>Already registered?</h3>
   <form class="form" name="formLogin" ng-submit="login(formLogin)" ng-controller="LoginCtrl" novalidate>
 
 
     <div class="form-group">
       <span class="input input--kaede" ng-class="{true: 'input--filled'}[user.email !== '']">
-        <input class="input__field input__field--kaede" placeholder="xxx@roomorama.com" type="email" id="login-email" name="email" class="form-control" ng-model="user.email" required />
-        <label class="input__label input__label--kaede" for="login-email">
+        <input class="input__field input__field--kaede" placeholder="xxx@roomorama.com" type="email" id="{{formtype}}-login-email" name="email" class="form-control" ng-model="user.email" required />
+        <label class="input__label input__label--kaede" for="{{formtype}}-login-email">
           <span class="input__label-content input__label-content--kaede">Email</span>
         </label>
       </span>
@@ -18,8 +18,8 @@
 
     <div class="form-group">
       <span class="input input--kaede"  ng-class="{true: 'input--filled'}[user.password !== '']">
-        <input class="input__field input__field--kaede" placeholder="***" type="password" name="password" class="form-control" ng-model="user.password" required id="login-password"/>
-        <label class="input__label input__label--kaede" for="login-password">
+        <input class="input__field input__field--kaede" placeholder="***" type="password" name="password" class="form-control" ng-model="user.password" required id="{{formtype}}-login-password"/>
+        <label class="input__label input__label--kaede" for="{{formtype}}-login-password">
           <span class="input__label-content input__label-content--kaede">Password</span>
         </label>
       </span>

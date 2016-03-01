@@ -97,4 +97,13 @@ angular.module('foosballApp')
     }
 
 
+  }).directive('ranking', function(){
+    return{
+      templateUrl: 'components/ranking/ranking.html',
+      restrict: 'E',
+      scope: {
+        'formtype': '@'
+      },
+      transclude: true
+    }
   });

@@ -26,4 +26,13 @@ angular.module('foosballApp')
       }
     };
 
+  }).directive('login', function(){
+      return{
+        templateUrl: 'app/account/login/login.html',
+        restrict: 'E',
+        scope: {
+          'formtype': '@'
+        },
+        transclude: true
+      }
   });

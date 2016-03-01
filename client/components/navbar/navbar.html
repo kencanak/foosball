@@ -1,7 +1,9 @@
 <div class="navbar navbar-default navbar-static-top" ng-class="{true: 'showGameForm'}[showGameForm.showGameForm]" ng-controller="NavbarCtrl">
   <div class="container">
     <div class="game-form-menu">
-      <div ng-include="'components/game/game.html'"></div>
+      <div>
+        <gamecreator></gamecreator>
+      </div>
     </div>
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">

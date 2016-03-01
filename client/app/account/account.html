@@ -1,10 +1,21 @@
 <div class="container-fluid login-outer-wrapper">
-  <div class="row login-content-wrapper col-xs-8">
+  <div class="row login-content-wrapper col-xs-8 visible-lg visible-md">
     <!--- registration section -->
-    <div ng-include="'app/account/signup/signup.html'"></div>
+    <div>
+      <signup formtype="web"></signup>
+    </div>
     <!-- end of registration section -->
     <!-- login section -->
-    <div ng-include="'app/account/login/login.html'"></div>
+    <div>
+      <login formtype="web"></login>
+    </div>
+    <!-- end of login section -->
+  </div>
+  <div class="row mobile-login-content-wrapper col-xs-10 visible-xs visible-sm">
+    <!-- login section -->
+    <div>
+      <login formtype="mobile"></login>
+    </div>
     <!-- end of login section -->
   </div>
 </div>

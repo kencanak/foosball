@@ -49,4 +49,13 @@ angular.module('foosballApp')
 
     }
 
+  }).directive('gamehistory', function(){
+    return{
+      templateUrl: 'components/game-history/game-history.html',
+      restrict: 'E',
+      scope: {
+        'formtype': '@'
+      },
+      transclude: true
+    }
   });
