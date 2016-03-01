@@ -46,7 +46,7 @@ angular.module('foosballApp')
 
   }).directive('signup', function(){
     return{
-      templateUrl: 'app/account/signup/signup.html',
+      templateUrl: 'components/signup/signup.html',
       restrict: 'E',
       scope: {
         'formtype': '@'

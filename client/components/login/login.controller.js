@@ -30,7 +30,7 @@ angular.module('foosballApp')
 
   }).directive('login', function(isMobileRegistration){
       return{
-        templateUrl: 'app/account/login/login.html',
+        templateUrl: 'components/login/login.html',
         restrict: 'E',
         scope: {
           'formtype': '@'

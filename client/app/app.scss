@@ -70,15 +70,15 @@ $roomoramathemehover: #f6786c;
 // Component styles are injected through grunt
 // injector
 @import 'account/account.scss';
-@import 'account/login/login.scss';
-@import 'account/signup/signup.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
 @import 'game-history/game-history.scss';
 @import 'game/game.scss';
+@import 'login/login.scss';
 @import 'modal/modal.scss';
 @import 'navbar/navbar.scss';
 @import 'ranking/ranking.scss';
+@import 'signup/signup.scss';
 // endinjector
 
 .loader-wrapper

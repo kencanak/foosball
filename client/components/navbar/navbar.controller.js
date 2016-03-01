@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('foosballApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth, showGameForm) {
+  .controller('NavbarCtrl', function ($scope, $location, Auth, showGameForm, isMobileRegistration) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
     }];
+
+    $scope.isMobileRegistration = isMobileRegistration;
 
     $scope.showGameForm = showGameForm;
     $scope.showGameForm.added = false;
@@ -16,6 +18,7 @@ angular.module('foosballApp')
     $scope.getCurrentUser = Auth.getCurrentUser;
 
     $scope.logout = function() {
+      $scope.isMobileRegistration.isMobileRegistration = false;
       Auth.logout();
       $location.path('/account');
     };
