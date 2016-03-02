@@ -19,7 +19,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li ng-show="isLoggedIn()" class="visible-lg visible-sm visible-md"><a href="" class="create-game-link" ng-click="showGameForm.showGameForm = !showGameForm.showGameForm"><span class="glyphicon glyphicon-plus" ng-class="showGameForm.showGameForm ? 'glyphicon-remove': 'glyphicon-plus'"></span> {{showGameForm.showGameForm ? 'Close' : 'New Game'}}</a></li>
 
-        <li ng-show="isLoggedIn()" class="visible-xs"><a href="" class="create-game-link" ng-click="showGameForm.showGameForm = !showGameForm.showGameForm; isCollapsed = !isCollapsed"><span class="glyphicon glyphicon-plus" ng-class="'glyphicon-plus'"></span> New Game</a></li>
+        <li ng-show="isLoggedIn()" class="visible-xs"><a href="" class="create-game-link" ng-click="showGameForm.showGameForm = true; isCollapsed = !isCollapsed"><span class="glyphicon glyphicon-plus" ng-class="'glyphicon-plus'"></span> New Game</a></li>
 
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
       </ul>

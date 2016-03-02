@@ -128,4 +128,19 @@
     height: 500px;
     padding-right: 10px;
   }
+
+  .game-for-the-day {
+    .games {
+      .row {
+        box-sizing: border-box;
+        border: thin dotted $roomoramatheme;
+        width: 98%;
+
+        .col-xs-6
+        {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

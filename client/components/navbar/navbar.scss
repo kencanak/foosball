@@ -34,14 +34,6 @@
   }
 }
 
-.create-game-link
-{
-  @include border-radius(21px);
-  border: thin solid white;
-  padding: 5px 15px !important;
-  margin-right: 10px;
-  margin-top: 9px;
-}
 
 .header-logo.showGameForm {
   visibility: visible;
@@ -69,6 +61,7 @@
     @include border-radius(-0x);
     border: none;
   }
+
 }
 
 @media (min-width: $screen-sm-min){

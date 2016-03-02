@@ -9,7 +9,8 @@ angular.module('foosballApp', [
   'ngDragDrop',
   'cgNotify',
   "ngAnimate",
-  "angular-momentjs"
+  "angular-momentjs",
+  "angularjs-dropdown-multiselect"
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -17,6 +18,14 @@ angular.module('foosballApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
+  })
+  .factory('gameRecord', function(){
+    return {
+      team1: [],
+      team2: [],
+      team1Score: 0,
+      team2Score: 0
+    }
   })
   .factory('gamePlayers', function(){
     return [

@@ -3,6 +3,14 @@ html, body,.content-wrapper, .container-fluid {
   font-family: "Roboto","Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+.text-danger
+{
+  float: left;
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 12px;
+}
+
 
 .thing-form {
   margin: 20px 0;
@@ -37,6 +45,58 @@ html, body,.content-wrapper, .container-fluid {
 
 .navbar-text {
   margin-left: 15px;
+}
+
+
+.create-game-link, .close-game-mobile
+{
+  @include border-radius(21px);
+  border: thin solid white;
+  padding: 5px 15px !important;
+  margin-right: 10px;
+  margin-top: 9px;
+  color: #fff;
+
+  &:hover
+  {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.game-form-mobile
+{
+  max-height: 0px;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+
+  opacity: 0;
+
+  &.show
+  {
+    margin-top: -20px;
+    height: auto;
+    max-height: 600px;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+
+  h3
+  {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  h4
+  {
+    font-size: 14px;
+  }
+
+  .btn-create-game
+  {
+    font-size: 12px;
+  }
 }
 
 

@@ -3,6 +3,15 @@
   color: #fff;
   padding-bottom: 40px;
 
+  .close-game-wrapper
+  {
+    margin-top: 15px;
+    a
+    {
+      float: right !important;
+    }
+  }
+
   h3
   {
     padding-bottom: 5px;
@@ -27,6 +36,20 @@
     border-top: 2px solid #373735;
     padding: 15px;
     margin-bottom: 30px;
+
+    .dropdown-menu-form
+    {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .mobile-row
+    {
+      &:last-child
+      {
+        margin-top: 15px;
+      }
+    }
 
 
     .score
