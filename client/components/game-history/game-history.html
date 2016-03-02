@@ -36,7 +36,7 @@
     <div ng-show="getLength(gameHistory) === 0 && doneCalc">
       <h1 class="text-danger">Gasp! Nobody played?</h1>
     </div>
-    <div class="loader-wrapper" ng-class="{true: 'hide'}[getLength(gameHistory) > 0]">
+    <div class="loader-wrapper" ng-class="{true: 'hide'}[doneCalc]">
       <img src="assets/images/ripple.svg"/>
     </div>
   </div>

@@ -17,6 +17,9 @@ angular.module('foosballApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
+
+    var gameForm = "#game-wrapper";
+
     $scope.logout = function() {
       $scope.isMobileRegistration.isMobileRegistration = false;
       Auth.logout();
