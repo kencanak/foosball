@@ -125,7 +125,7 @@
 }
 @media (max-width: $screen-xs-max) and (max-width:  $screen-sm-min){
   .game-history-content-wrapper {
-    height: 500px;
+    max-height: 500px;
     padding-right: 10px;
   }
 
@@ -134,7 +134,7 @@
       .row {
         box-sizing: border-box;
         border: thin dotted $roomoramatheme;
-        width: 98%;
+        width: 97%;
 
         .col-xs-6
         {

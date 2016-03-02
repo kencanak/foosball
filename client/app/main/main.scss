@@ -73,11 +73,12 @@ html, body,.content-wrapper, .container-fluid {
 
   opacity: 0;
 
+
   &.show
   {
     margin-top: -20px;
     height: auto;
-    max-height: 600px;
+    max-height: 660px;
     opacity: 1;
     margin-bottom: 30px;
   }
@@ -96,6 +97,11 @@ html, body,.content-wrapper, .container-fluid {
   .btn-create-game
   {
     font-size: 12px;
+  }
+}
+@media (max-width: $screen-xs-max) and (max-width:  $screen-sm-min) {
+  .text-danger {
+    font-size: 12px !important;
   }
 }
 
