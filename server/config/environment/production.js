@@ -18,6 +18,6 @@ module.exports = {
     uri:    process.env.MONGOLAB_URI ||
             process.env.MONGOHQ_URL ||
             process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-            'mongodb://localhost/foosball'
+            'mongodb://heroku_spcncms6:heroku_spcncms6@ds019628.mlab.com:19628/heroku_spcncms6'
   }
 };
