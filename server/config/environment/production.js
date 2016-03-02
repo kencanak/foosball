@@ -18,6 +18,6 @@ module.exports = {
     uri:    process.env.MONGOLAB_URI ||
             process.env.MONGOHQ_URL ||
             process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-            'mongodb://heroku_spcncms6:heroku_spcncms6@ds019628.mlab.com:19628/heroku_spcncms6'
+            'mongodb://heroku_hqg08h5f:heroku_hqg08h5f@ds019068.mlab.com:19068/heroku_hqg08h5f'
   }
 };
