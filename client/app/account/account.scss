@@ -177,7 +177,7 @@ $loginBg:                           #c7c6c2;
 
 
 
-  .login-content-wrapper, .mobile-login-content-wrapper
+  .login-content-wrapper
   {
     position: absolute;
     top: 50%;
@@ -220,9 +220,8 @@ $loginBg:                           #c7c6c2;
 
   .mobile-login-content-wrapper
   {
-    top: 15%;
-    left:25%;
-    transform: translate(-25%,-25%);
+    margin-top: 40px;
+    margin-bottom: 40px;
 
     .login-section-common-style
     {
