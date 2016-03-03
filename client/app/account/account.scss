@@ -1,5 +1,6 @@
 $loginBg:                           #c7c6c2;
 
+
 .login-outer-wrapper
 {
   background: $themebg;
@@ -220,13 +221,21 @@ $loginBg:                           #c7c6c2;
 
   .mobile-login-content-wrapper
   {
+    position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
+
+
 
     .login-section-common-style
     {
       height: 475px !important;
     }
+  }
+}
+@media (max-width: $screen-xs-max) and (max-width:  $screen-sm-min) {
+  .login-outer-wrapper {
+    min-height: 570px !important;
   }
 }
 

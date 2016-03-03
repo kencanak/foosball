@@ -1,6 +1,8 @@
 html, body,.content-wrapper, .container-fluid {
   height: 100%;
   font-family: "Roboto","Helvetica Neue", Helvetica, Arial, sans-serif !important;
+//  background: #fff;
+//  color: #fff;
 }
 
 .text-danger
@@ -72,6 +74,8 @@ html, body,.content-wrapper, .container-fluid {
   transition: max-height 0.8s;
 
   opacity: 0;
+
+
 
 
   &.show
